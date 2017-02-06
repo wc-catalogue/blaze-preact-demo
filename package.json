@@ -1,0 +1,35 @@
+{
+  "name": "fronta",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "webpack-dev-server --env.dev --hot --host 0.0.0.0",
+    "start:prod": "pushstate-server dist/",
+    "test": "echo TODO",
+    "build": "rimraf dist && webpack --env.prod"
+  },
+  "dependencies": {
+    "blaze-elements": "^1.2.1",
+    "preact": "^7.1.0"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "^3.0.0-beta.18",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.10.0",
+    "html-webpack-plugin": "^2.25.0",
+    "image-webpack-loader": "^3.1.0",
+    "json-loader": "^0.5.4",
+    "postcss-cssnext": "^2.9.0",
+    "postcss-loader": "^1.2.1",
+    "postcss-reporter": "^3.0.0",
+    "progress-bar-webpack-plugin": "^1.9.1",
+    "pushstate-server": "^2.1.0",
+    "style-loader": "^0.13.1",
+    "typescript": "next",
+    "url-loader": "^0.5.7",
+    "webpack": "beta",
+    "webpack-config-utils": "^2.3.0",
+    "webpack-dev-server": "beta"
+  }
+}
