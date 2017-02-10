@@ -15,11 +15,8 @@ interface TodoListState {
 export default class App extends Component<{}, TodoListState> {
   state: TodoListState = { todos: [], text: '' };
 
-  setText = (e: Event) => {
-
-    console.log((e.target as HTMLInputElement).value);
-
-    this.setState({ text: (e.target as HTMLInputElement).value } as TodoListState);
+  setText = (e: CustomEvent) => {
+    this.setState({ text: e.detail.data } as TodoListState);
   }
 
   addTodo = () => {
@@ -36,7 +33,7 @@ export default class App extends Component<{}, TodoListState> {
   render({ }, { todos, text }: TodoListState) {
     return (
       <form onSubmit={this.addTodo}>
-        <bl-input value={text} onInput={this.setText} />
+        <bl-input value={text} onChange={this.setText} />
         <bl-button onClick={this.addTodo} color="brand">Add</bl-button>
         <ul>
           {todos.map(({text}) => (
