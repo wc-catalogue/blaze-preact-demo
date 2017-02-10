@@ -1,2 +1,3 @@
-# fronta
-Snooze tabs and todos for later
+# Blaze Preact Demo
+
+Example app
